@@ -1,14 +1,12 @@
 package com.hjf.tank;
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import java.io.File;
 
 import com.hjf.myEnum.SoundType;
 import com.hjf.player.Player;
 
 /**
- * 用线程来播放射击声音
+ * 用线程来播放坦克的声音
  * @author hujinfu
  *
  */
@@ -26,13 +24,13 @@ public class TankSounds implements Runnable {
 	}
 	@Override
 	public void run() {
-        if (SoundType.start == sound) {
+        if (SoundType.tankStart == sound) {
 			player = new Player();
 			player.play(tankMoveSounds);
 			while (true) {
 				player.play(tankBgSound);
 			}
-		} else if (SoundType.shoot == sound) {
+		} else if (SoundType.tankShoot == sound) {
 			player = new Player();
 			player.play(tankShootSounds);
 		}		

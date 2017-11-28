@@ -6,6 +6,6 @@ package com.hjf.myEnum;
  *
  */
 public enum SoundType {
-	shoot,start
+	tankShoot,tankStart
 
 }
